@@ -1,0 +1,16 @@
+File: README
+V: 2 <ancient> m0shbear
+==
+Hex-/Dec-/Oct-/Bin-dumper
+
+A basic hex/oct/dec/bin-dumper wherein each byte of input is printed in
+* binary (bbbbbbbb),
+* decimal (??n),
+* octal(ooo), or
+* hexadecimal (xx)
+form.
+
+All the other hexdumpers were too fancy for my purposes so I hacked together the hexdump
+then wrote the rest.
+
+This code is released in the public domain, but donations are encouraged.
