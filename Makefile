@@ -16,7 +16,7 @@ xdumpo: xdump.c
 	$(CC) $(CFLAGS) -DPUT=3 -o $@ $^
 
 install:
-	install -g 0 -u 0 -t /usr/local/bin xdump xdumpb xdumpd xdumpo 
+	install -g 0 -o 0 -m 755 -t /usr/local/bin xdump xdumpb xdumpd xdumpo 
 clean:
 	rm xdump xdumpb xdumpd xdumpo
 
