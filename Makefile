@@ -1,20 +1,23 @@
 CC=gcc
 CFLAGS=-Wall -O2 -ggdb
 
-all: hexdump bindump decdump octdump
+all: xdumpb xdumpo xdumpd xdump
 
-bindump: xdump.c
+xdumpb: xdump.c
 	$(CC) $(CFLAGS) -DPUT=0 -o $@ $^
 
-hexdump: xdump.c
+xdump: xdump.c
 	$(CC) $(CFLAGS) -DPUT=1 -o $@ $^
 
-decdump: xdump.c
+xdumpd: xdump.c
 	$(CC) $(CFLAGS) -DPUT=2 -o $@ $^
 
-octdump: xdump.c
+xdumpo: xdump.c
 	$(CC) $(CFLAGS) -DPUT=3 -o $@ $^
 
+install:
+	install -g 0 -u 0 -t /usr/local/bin xdump xdumpb xdumpd xdumpo 
 clean:
-	rm *dump
+	rm xdump xdumpb xdumpd xdumpo
+
 
